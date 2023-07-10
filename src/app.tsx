@@ -1,4 +1,4 @@
-import { useState } from 'preact/compat'
+import { useState } from 'react'
 import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
