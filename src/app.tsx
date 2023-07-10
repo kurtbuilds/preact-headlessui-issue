@@ -2,11 +2,11 @@ import { useState } from 'react'
 import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './app.css'
+import './App.css'
 import {Disclosure} from "@headlessui/react";
 
 export function MobileProfileButton({open}: { open: boolean }) {
-    return <div classNfame="-mr-2 flex items-center sm:hidden">
+    return <div className="-mr-2 flex items-center sm:hidden">
         {/* Mobile menu button */}
         <Disclosure.Button
             className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
@@ -22,7 +22,7 @@ export function MobileProfileButton({open}: { open: boolean }) {
 
 
 export function Header() {
-    return <Disclosure as="nav" className="border-b border-gray-200 bg-white" defaultOpen={true}>
+    return <Disclosure as="nav" className="border-b border-gray-200 bg-white">
         {({open}: { open: boolean }) => (
             <>
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -63,4 +63,4 @@ function App() {
     )
 }
 
-export {App}
+export default App
