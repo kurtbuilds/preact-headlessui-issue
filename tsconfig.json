@@ -16,10 +16,18 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-//    "jsxImportSource": "preact",
+    "jsxImportSource": "preact",
     "baseUrl": "./",
     /* Linting */
     "strict": true,
+    "paths": {
+      "react": [
+        "./node_modules/preact/compat/"
+      ],
+      "react-dom": [
+        "./node_modules/preact/compat/"
+      ],
+    },
     "noFallthroughCasesInSwitch": true
   },
   "include": [

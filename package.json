@@ -5,18 +5,30 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "install": "pnpm install",
+    "check": "tsc",
     "preview": "vite preview"
+  },
+  "alias": {
+    "react": "preact/compat",
+    "react-dom": "preact/compat"
+  },
+  "overrides": {
+    "react": "npm:@preact/compat@latest",
+    "react-dom": "npm:@preact/compat@latest"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "npm:@preact/compat@latest",
+      "react-dom": "npm:@preact/compat@latest"
+    }
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "^2.0.18",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "preact": "^10.16.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.14",
-    "@types/react-dom": "^18.2.6",
     "@preact/preset-vite": "^2.5.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.0"
