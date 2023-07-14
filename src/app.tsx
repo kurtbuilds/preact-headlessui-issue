@@ -1,9 +1,9 @@
-import { useState } from 'preact/compat'
-import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import viteLogo from '/vite.svg';
 import {Disclosure} from "@headlessui/react";
+import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline';
+import {useState} from 'preact/compat';
+import 'src/app.css';
+import reactLogo from './assets/preact.svg';
 
 export function MobileProfileButton({open}: { open: boolean }) {
     return <div className="-mr-2 flex items-center sm:hidden">
@@ -22,7 +22,7 @@ export function MobileProfileButton({open}: { open: boolean }) {
 
 
 export function Header() {
-    return <Disclosure as="nav" className="border-b border-gray-200 bg-white">
+    return <Disclosure as="nav" classme="border-b border-gray-200 bg-white">
         {({open}: { open: boolean }) => (
             <>
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -49,13 +49,13 @@ function App() {
                     <img src={reactLogo} className="logo react" alt="React logo" />
                 </a>
             </div>
-            <h1>Vite + React</h1>
+            <h1>Vite + Preact</h1>
             <div className="card">
                 <button onClick={() => setCount((count) => count + 1)}>
                     count is {count}
                 </button>
                 <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
+                    Edit <code>src/app.tsx</code> and save to test HMR
                 </p>
             </div>
             <Header/>
